@@ -6,6 +6,7 @@ export default function createBeverage(req: Request, res: Response): void {
   const {
     name,
     container_units,
+    custom_order,
     price_per_unit,
     size,
     size_measurement,
@@ -15,6 +16,7 @@ export default function createBeverage(req: Request, res: Response): void {
   const properties = {
     name,
     container_units,
+    custom_order,
     price_per_unit,
     size,
     size_measurement,

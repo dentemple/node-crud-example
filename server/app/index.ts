@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /* Routes */
 app.use(`${BASE_URL}/beverages`, beveragesRouter);
 
-app.get(`${BASE_URL}/ping`, (_, res) => res.send("ok"));
-app.get(`${BASE_URL}`, (req, res) => res.send(req.url));
+app.get(`${BASE_URL}`, (_, res) => res.send("ok"));
+app.get(`/ping`, (_, res) => res.send("ok"));
 
 export default app;

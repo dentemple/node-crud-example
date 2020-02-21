@@ -8,6 +8,7 @@ const model = new Schema({
   createdAt: { type: Date, default: Date.now },
   // ---
   container_units: { type: String },
+  custom_order: { type: Number },
   price_per_unit: { type: Number },
   size: { type: Number },
   size_measurement: { type: String },

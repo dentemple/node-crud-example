@@ -2,6 +2,18 @@
 
 ## Installation
 
+- **Required Technologies**
+  - Node.js (Recommended: v12+)
+  - MongoDB
+    - [MongoDB on Ubuntu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+    - Before running the project, ensure that the relevant mongo services for your architecture are activated
+- `npm install` to install the dependencies
+- `npm start` to run the project for development
+
+The client will run on [port 3000](http://localhost:3000/).
+
+The server will run on [port 8080](http://localhost:8080/).
+
 ## Requirements
 
 Your mission if you choose to accept is to build the backend which allows the following to be editable:

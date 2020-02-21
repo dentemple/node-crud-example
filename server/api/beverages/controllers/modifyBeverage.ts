@@ -8,6 +8,7 @@ export default function modifyBeverage(req: Request, res: Response): void {
   const {
     name,
     container_units,
+    custom_order,
     price_per_unit,
     size,
     size_measurement,
@@ -17,13 +18,12 @@ export default function modifyBeverage(req: Request, res: Response): void {
   const properties = {
     name,
     container_units,
+    custom_order,
     price_per_unit,
     size,
     size_measurement,
     special_offer
   };
-
-  console.log("body:", req.body);
 
   Beverages.findOneAndUpdate(
     { _id: id },

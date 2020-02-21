@@ -2,13 +2,15 @@
   "name": "node-crud",
   "version": "0.1.0",
   "description": "",
-  "author": "Denny Temple <dev@dentemple.com>",
+  "author": "Denny S. Temple <dev@dentemple.com>",
   "license": "MIT",
   "main": "server",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && nodemon dist",
+    "start": "concurrently --kill-others-on-fail \"npm run start:server\" \"npm run start:client\"",
     "start:prod": "npm run build && node dist",
+    "start:server": "npm run build && nodemon dist",
+    "start:client": "cd client && npm start",
     "test": "jest -i",
     "test:watch": "jest -i --watch",
     "---": "---",
@@ -19,6 +21,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.1"
   },
